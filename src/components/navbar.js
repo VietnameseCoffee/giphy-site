@@ -9,7 +9,7 @@ class NavBar extends Component {
       <div className="navbar-wrapper">
         <div className="navbar">
         
-          <div>
+          <div className="logo">
             Jiffeh!
           </div>
 

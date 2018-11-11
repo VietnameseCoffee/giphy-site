@@ -5,8 +5,8 @@ class SearchBar extends Component {
 
   render() {
     return (
-      <div className="searchbar-wrapper">
-        <div className="search-bar">
+      <div className="searchbar">
+
           <form>
             <input
               placeholder="Search yo Gif">
@@ -14,7 +14,7 @@ class SearchBar extends Component {
             <button>Go</button>
           </form>   
 
-        </div>
+
       </div>
     );
   }

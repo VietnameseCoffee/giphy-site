@@ -1,11 +1,11 @@
 .body {
   font: inherit;
+  height: inherit;
 }
 
 .app {
   font-size: 20px;
 }
-
 
 .navbar-wrapper {
   border: 1px solid #333333;
@@ -13,13 +13,37 @@
   color: white;
 }
 
+input {
+  border: 1px solid transparent;
+  border-top-left-radius-: 3px;
+  border-bottom-left-radius-: 3px;
+  height: 95%;
+}
 
+button {
+  background: #41aa00;
+  border-top-right-radius-: 3px;
+  border-bottom-right-radius-: 3px;
+  border: 1px solid transparent;
+  height: 95%;
+}
+
+
+form {
+  height: 100%;
+}
 
 @media screen and (min-width: 600px) {
   
+
+  .navbar-wrapper {
+    height: 70px;
+  }
+
   .navbar {
     display: flex;
     justify-content: space-between;
+    height: inherit;
   }
 
   .navbar > *:first-child {
