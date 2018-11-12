@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import '../styles/app.css';
 import NavBar from './navbar';
+import Main from './main';
 
 class App extends Component {
 
@@ -9,7 +10,7 @@ class App extends Component {
     return (
       <div className="app">
         <NavBar/>
-        <div>Index Page</div>
+        <Main/>
 
         <div>Modal</div>
 
