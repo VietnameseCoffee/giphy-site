@@ -9,9 +9,11 @@ class SearchBar extends Component {
 
           <form>
             <input
+              className="search-input"
+              type="text"
               placeholder="Search yo Gif">
             </input>
-            <button>Go</button>
+            <button className="search-button">Go</button>
           </form>   
 
 
