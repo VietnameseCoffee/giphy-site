@@ -10,15 +10,20 @@ class GifsIndex extends Component {
 
     this.props.fetchGifs();
 
+
+    // could move use an action creator instead and have
+    // the modal get state from the redux store
     const index = document.querySelector('.gifs-index');
     console.log(index)
-    index.addEventListener('click', (e) => {
+    index.addEventListener('click', ({ target }) => {
       const modal = document.querySelector(".modal");
       const modalImage = document.getElementById("modal-image");
-      if (e.target.tagName === "IMG") {
-        if (modal && modalImage) {
+      const giphyLink = document.getElementById("giphy-link");
+      if (target.tagName === "IMG") {
+        if (modal && modalImage && giphyLink) {
+          modalImage.src = target.src;
+          giphyLink.href = target.dataset.giphyurl;
           modal.classList.add("opened")
-          modalImage.src = e.target.src
         }
       }
     })
@@ -28,11 +33,12 @@ class GifsIndex extends Component {
   createColumns(gifs) {
     const columns = [[],[],[],[]]
 
-    gifs.forEach(({ images, id, title}, i) => {
+    gifs.forEach(({ url, images, id, title}, i) => {
       const originalUrl = images.original.url
       const fragment = (
         <div className={`gif-wrapper`} key={id}>
           <img
+            data-giphyurl={url}
             src={originalUrl}
             alt={title}></img>
         </div>

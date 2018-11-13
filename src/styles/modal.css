@@ -14,7 +14,7 @@
   animation: darken 0.3s;
 }
 
-.modal-image-wrapper {
+.modal-wrapper {
   z-index: 3;
   position: fixed;
   top: 10%;
@@ -25,21 +25,53 @@
   border-radius: 8px;
   overflow: hidden;
   animation: darken 0.6s;
-
-  
 }
 
 #modal-image {
-  height: 100%;
+  /* height: 100%; */
   width: 100%;
   object-fit: contain;
+}
+
+#modal-details {
+  color: white;
+  margin-top: 10px;
 }
 
 .modal.opened {
   display: block;
 }
 
+
+#link-wrapper {
+  border: 2px solid #303d66;
+  background: #303d66;
+  overflow-x: hidden;
+  width: 90%;
+}
+
+#link-wrapper i {
+  display: inline;
+  margin: 0 6px 0 6px;
+  color: #dddddd
+}
+
+
+
+
 @keyframes darken {
   from { opacity: 0; }
   to   { opacity: 1; }
+}
+
+@media screen and (min-width: 769px) {
+  #modal-image {
+    object-fit: none;
+    position: relative;
+    top: 50px;
+    width: 100%;
+    height: 60%;
+    display: block;
+  }
+  
 }

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import '../styles/modal.css';
 
 class Modal extends Component {
@@ -17,8 +18,17 @@ class Modal extends Component {
     return (
       <div className="modal">
 
-        <div className="modal-image-wrapper">
+        <div className="modal-wrapper">
             <img id="modal-image"></img>
+
+            <div id="modal-details">
+              <div id="link-wrapper">
+
+                <span><a id="giphy-link" href="#">
+                  <i className="fas fa-external-link-square-alt"></i> Link 
+                </a></span>
+              </div>
+            </div>
         </div>
 
         <div className="modal-shadow"></div>
@@ -28,4 +38,14 @@ class Modal extends Component {
   }
 }
 
-export default Modal;
+const msp = (state) => {
+  return {
+
+  }
+};
+
+const mdp = (dispatch) => {
+  return {}
+};
+
+export default connect(msp, mdp)(Modal);

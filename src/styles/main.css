@@ -1,7 +1,8 @@
 main {
   padding: 5px;
-  /* background: #000000; */
-  background: white;
+  background: #000000;
+  /* background: white; */
+  min-height: 90vh;
 }
 
 .gifs-index {
@@ -17,11 +18,22 @@ main {
 .gif-wrapper {
   overflow: hidden;
   margin: 4px;
+  transition-duration: 0.5s;
+}
+
+.gif-wrapper:hover {
+  transform: scale(1.04);
 }
 
 .gif-wrapper > img {
+  box-sizing: border-box;
   width: 100%;
   object-fit: contain;
+  transition-duration: 0.8s;
+}
+
+.gif-wrapper > img:hover {
+  border: 2px solid yellow;
 }
 
 .gif-wrapper > img:hover {
@@ -39,9 +51,8 @@ main {
   }
 
   .gif-wrapper {
-    overflow: hidden;
     border-radius: 2px;
-    margin: 4px;
+    margin: 6px;
   }
 }
 

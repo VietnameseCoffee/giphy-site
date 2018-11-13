@@ -5,6 +5,8 @@
   margin: 0;
   font: 20px 'SF Pro Text', sans-serif;
   padding-bottom: 1px;
+  position: sticky;
+  top: 0;
 }
 
 h1 {
@@ -27,13 +29,11 @@ h1 {
   border: 0;
   padding: 2px 10px;
   width: 20%;
+  transition-duration: 0.2s;
 }
 
 .search-button:hover {
   cursor: pointer;
-}
-
-.search-button:hover {
   background: #4ac200;
 }
 

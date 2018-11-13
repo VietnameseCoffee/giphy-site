@@ -2,13 +2,13 @@ import axios from 'axios';
 
 
 export const RECEIVE_GIFS = "RECEIVE_GIFS";
+export const RECEIVE_DETAILS = "RECEIVE_DETAILS";
 
 const receiveGifs = (data) => {
   return {
     type: RECEIVE_GIFS,
     payload: data
   }
-
 }
 
 export const fetchGifs = () => (dispatch) => {
