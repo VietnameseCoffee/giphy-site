@@ -16,7 +16,6 @@ class GifsIndex extends Component {
       const modal = document.querySelector(".modal");
       const modalImage = document.getElementById("modal-image");
       if (e.target.tagName === "IMG") {
-        console.log(e.target.src)
         if (modal && modalImage) {
           modal.classList.add("opened")
           modalImage.src = e.target.src
@@ -51,7 +50,7 @@ class GifsIndex extends Component {
   
   render() {
     const columns = this.createColumns(this.props.gifs)
-
+    console.log(this.props)
     return (
       <div className="gifs-index">
         { columns }

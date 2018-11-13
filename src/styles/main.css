@@ -24,6 +24,9 @@ main {
   object-fit: contain;
 }
 
+.gif-wrapper > img:hover {
+  cursor: pointer;
+}
 
 @media screen and (min-width: 769px) {
   main {
