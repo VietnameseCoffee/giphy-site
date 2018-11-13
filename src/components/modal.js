@@ -16,7 +16,7 @@ class Modal extends Component {
   render() {
     return (
       <div className="modal">
-        <div className="close"><i class="far fa-window-close"></i></div>
+        <div className="close"><i className="far fa-window-close"></i></div>
 
         <div className="modal-wrapper">
             <img id="modal-image" alt="Modal!"></img>
