@@ -13,7 +13,7 @@ class SearchBar extends Component {
               type="text"
               placeholder="Search yo Gif">
             </input>
-            <button className="search-button">Go</button>
+            <button className="search-button"><i class="fas fa-search"></i></button>
           </form>   
 
 

@@ -1,28 +1,49 @@
 main {
-  padding: 10px;
+  padding: 5px;
+  background: #000000;
 }
 
 .gifs-index {
-  display: grid;
-  /* grid-template-columns: 47% 47%; */
-  grid-template-columns: 1fr 1fr;
-  grid-auto-rows: minmax(100px, auto);
-  grid-gap: 2vw;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.gif-column {
+  width: 50%;
 }
 
 .gif-wrapper {
-  border: 1px solid blue;
   overflow: hidden;
+  margin: 4px;
 }
 
-@media screen and (min-width: 600px) {
-  .gifs-index {
-    grid-template-columns: 1fr 1fr 1fr;
+.gif-wrapper > img {
+  width: 100%;
+  object-fit: contain;
+}
+
+
+@media screen and (min-width: 769px) {
+  main {
+    padding: 12px;
+  }
+  
+  .gif-column {
+    flex: 1;
+    width: 25%;
+  }
+
+  .gif-wrapper {
+    overflow: hidden;
+    border-radius: 2px;
+    margin: 4px;
   }
 }
 
 @media screen and (min-width: 900px) {
   .gifs-index {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 80%;
+    margin: 0 auto;
   }
 }

@@ -11,7 +11,7 @@ class NavBar extends Component {
         <div className="navbar">
         
           <div className="logo">
-            Jiffeh!
+            <h1>Jiffeh!</h1>
           </div>
 
           <SearchBar/>   

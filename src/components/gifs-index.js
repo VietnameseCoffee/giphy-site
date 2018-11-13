@@ -10,27 +10,36 @@ class GifsIndex extends Component {
     this.props.fetchGifs();
 
   }
+
+  createColumns(gifs) {
+    const columns = [[],[],[],[]]
+
+    gifs.forEach(({ images, id, title}, i) => {
+      const originalUrl = images.original.url
+      const fragment = (
+        <div className={`gif-wrapper`} key={id}>
+          <img
+            src={originalUrl}
+            alt={title}></img>
+        </div>
+        )
+
+      columns[i % columns.length].push(fragment);
+    })
+
+    return columns.map((col, i) => 
+        <div key={`col-${i}`} className="gif-column">
+          {col}
+        </div>
+    )
+  }
   
   render() {
-    console.log(this.props)
+    const columns = this.createColumns(this.props.gifs)
+
     return (
       <div className="gifs-index">
-        {
-          this.props.gifs.map(({ images, url, id, title}, i) => {
-            if (i === 1) console.log(images)
-            const preview = images.fixed_height_small.url
-            return (
-              <div className="gif-wrapper" key={id}>
-                <img src={preview} alt={title}></img>
-
-              </div>
-              )
-          })
-          // extract relevant gif values
-          // use it to return a div with img
-          // <Gif>
-        }
-
+        { columns }
       </div>
     );
   }

@@ -1,27 +1,40 @@
 .navbar-wrapper {
-  border: 1px solid #333333;
-  background: black;
+  border: 1px solid #303d66;
+  background: #303d66;
   color: white;
   margin: 0;
+  font: 20px 'SF Pro Text', sans-serif;
+  padding-bottom: 1px;
+}
+
+h1 {
+  line-height: 24px;
+  margin: 2px;
+  font-size: 24px;
 }
 
 .search-input {
   box-sizing: border-box;
   border: 0;
-  border-top-left-radius-: 3px;
-  border-bottom-left-radius-: 3px;
   padding: 2px 6px;
   width: 80%;
+  background: #eeeeee;
 }
 
 .search-button {
   box-sizing: border-box;
-  background: #41aa00;
-  border-top-right-radius-: 3px;
-  border-bottom-right-radius-: 3px;
+  background: #368b00;
   border: 0;
   padding: 2px 10px;
   width: 20%;
+}
+
+.search-button:hover {
+  cursor: pointer;
+}
+
+.search-button:hover {
+  background: #4ac200;
 }
 
 .searchbar {
@@ -32,36 +45,48 @@
   height: 100%;
 }
 
+
 @media screen and (min-width: 600px) {
   
-
+  h1 {
+    font-size: 40px;
+    /* text-align: center; */
+    margin: 25px 0 20px 0;
+    padding: 0 8px 0 8px;
+  }
+  
   .navbar-wrapper {
     height: 70px;
+    padding-bottom: 0;
   }
-
+  
   .navbar {
     display: flex;
     height: inherit;
   }
-
+  
   .navbar > *:first-child {
     flex: 0.25;
   }
-
+  
   .navbar > * {
     flex: 1;
   }
-
+  
   .searchbar {
     text-align: left;
   }
-
+  
   .search-input {
     height: 60px;
     align-content: bottom;
     margin-top: 5px;
-    padding: 0;
+    padding: 0 10px;
     width: 70%;
+    vertical-align: middle;
+    font-size: 36px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
   }
   .search-button {
     height: 60px;
@@ -70,6 +95,14 @@
     display: inline-block;
     padding: 0px 10px;
     width: 60px;
+    vertical-align: middle;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
   }
-
+  
+  .fas.fa-search {
+    font-size: 30px;
+    line-height: 30px;
+    text-align: center;
+  }
 }
