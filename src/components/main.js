@@ -1,16 +1,19 @@
 import React, { Component } from 'react';
-
 import '../styles/main.css';
 
+import GifsIndex from './gifs-index';
+
 class Main extends Component {
+
+  componentDidMount() {
+
+
+  }
 
   render() {
     return (
       <main>
-        Main section:
-        <div className="gifs-index">
-          Gifs Index;
-        </div>
+        <GifsIndex/>
 
       </main>
     );
