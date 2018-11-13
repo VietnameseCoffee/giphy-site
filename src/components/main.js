@@ -11,6 +11,7 @@ class Main extends Component {
   }
 
   render() {
+    // maybe more features
     return (
       <main>
         <GifsIndex/>

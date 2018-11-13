@@ -10,7 +10,6 @@ import store from './store/store';
 // Dev
 
 document.addEventListener('DOMContentLoaded', () => {
-  console.log("hi")
   window.getState = store.getState;
   ReactDOM.render(<Root store={store}/>, document.getElementById('root'));
 })

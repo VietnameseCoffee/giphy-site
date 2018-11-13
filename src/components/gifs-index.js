@@ -13,16 +13,15 @@ class GifsIndex extends Component {
 
     // could move use an action creator instead and have
     // the modal get state from the redux store
+    // provide link details names, etc.
     const index = document.querySelector('.gifs-index');
-    console.log(index)
+
     index.addEventListener('click', ({ target }) => {
       const modal = document.querySelector(".modal");
       const modalImage = document.getElementById("modal-image");
-      const giphyLink = document.getElementById("giphy-link");
       if (target.tagName === "IMG") {
-        if (modal && modalImage && giphyLink) {
+        if (modal && modalImage) {
           modalImage.src = target.src;
-          giphyLink.href = target.dataset.giphyurl;
           modal.classList.add("opened")
         }
       }
@@ -56,7 +55,6 @@ class GifsIndex extends Component {
   
   render() {
     const columns = this.createColumns(this.props.gifs)
-    console.log(this.props)
     return (
       <div className="gifs-index">
         { columns }
