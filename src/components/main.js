@@ -14,7 +14,6 @@ class Main extends Component {
     return (
       <main>
         <GifsIndex/>
-
       </main>
     );
   }

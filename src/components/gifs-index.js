@@ -5,9 +5,24 @@ import { fetchGifs } from '../actions/gif-actions';
 
 class GifsIndex extends Component {
 
+
   componentDidMount() {
 
     this.props.fetchGifs();
+
+    const index = document.querySelector('.gifs-index');
+    console.log(index)
+    index.addEventListener('click', (e) => {
+      const modal = document.querySelector(".modal");
+      const modalImage = document.getElementById("modal-image");
+      if (e.target.tagName === "IMG") {
+        console.log(e.target.src)
+        if (modal && modalImage) {
+          modal.classList.add("opened")
+          modalImage.src = e.target.src
+        }
+      }
+    })
 
   }
 

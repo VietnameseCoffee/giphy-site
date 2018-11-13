@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import '../styles/app.css';
 import NavBar from './navbar';
 import Main from './main';
+import Modal from './modal';
 
 class App extends Component {
 
@@ -11,8 +12,7 @@ class App extends Component {
       <div className="app">
         <NavBar/>
         <Main/>
-
-        <div>Modal</div>
+        <Modal/>
 
       </div>
     );
